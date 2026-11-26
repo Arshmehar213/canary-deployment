@@ -1,0 +1,29 @@
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state and lock files
+*.tfstate
+*.tfstate.*
+*.tflock
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude variable files that may contain sensitive data or local IP overrides
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Ignore CLI configuration and override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Kubeconfig and local certs
+kubeconfig*
+*.pem
+*.key

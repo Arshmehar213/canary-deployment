@@ -1,0 +1,19 @@
+# ==============================================================================
+# Audited Vulnerability Exception Policy (.trivyignore.yaml)
+# ==============================================================================
+# Rules for adding an exception:
+# 1. Never add blanket ignores without an explicit `expired_at` date (max 30 days).
+# 2. Every entry MUST include a comment stating:
+#    - Why the CVE does not impact `canary-demo-app` in runtime (e.g., build-only
+#      library, unreachable code path, or upstream Debian patch pending).
+#    - The owner/approver and ticket reference.
+# 3. Expired entries are automatically enforced by Trivy on subsequent CI runs.
+#
+# Example format (currently empty — zero vulnerabilities ignored by default):
+# vulnerabilities:
+#   - id: CVE-2025-XXXXX
+#     paths:
+#       - "usr/lib/x86_64-linux-gnu/libexample.so.1"
+#     expired_at: 2026-12-15
+#     statement: "Upstream Debian bookworm patch pending; code path not invoked by Flask/Gunicorn."
+vulnerabilities: []

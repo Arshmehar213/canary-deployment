@@ -1,0 +1,22 @@
+aws_region          = "ap-south-1"
+project_name        = "canary-platform"
+environment         = "dev"
+vpc_cidr            = "10.20.0.0/16"
+availability_zones  = ["ap-south-1a", "ap-south-1b"]
+public_subnet_cidrs = ["10.20.1.0/24", "10.20.2.0/24"]
+private_subnet_cidrs = [
+  "10.20.16.0/20",
+  "10.20.32.0/20"
+]
+
+kubernetes_version = "1.36"
+
+# Replace with your workstation's public IP/32 (`curl -s https://checkip.amazonaws.com`/32)
+allowed_public_cidrs = ["203.0.113.25/32"]
+
+node_instance_types = ["t3.large"]
+node_desired_size   = 2
+node_min_size       = 2
+node_max_size       = 4
+
+ecr_repository_name = "canary-sample-app"
